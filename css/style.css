@@ -1,6 +1,30 @@
 body {
-    background-color: #FCCDA3;
+    background: #FCCDA3;
+    font-family: 'Roboto', 'Helvetica Nue', sans-serif;
+}
+header {
+    width: 576px;
+    height: 130px;
+    margin: auto;
 }
 h1 {
-    color: red;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 40px;
+}
+.stressed_vowel {
+    color: #D62323;
+}
+.description {
+    background: #FFFFFF;
+    width: 576px;
+    margin:16px auto 37px;
+    padding: 0.1px;
+    border-radius: 10px;
+}
+.text_description {
+    font-size: 34px;
+    text-align: center; 
+    margin: 30px;
 }

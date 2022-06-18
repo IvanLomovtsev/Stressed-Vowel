@@ -28,3 +28,22 @@ h1 {
     text-align: center; 
     margin: 30px;
 }
+.btn {
+    width: 576px;
+    margin: auto;
+    text-align: center;
+}
+.btn_begin {
+    margin:auto;
+    width: 300px;
+    height: 150px;
+    border: none;
+    border-radius: 10px;
+    font-size: 50px;
+    font-weight: bold;
+    box-shadow: 0px 15px 15px #999;   
+}
+.btn_begin:active {
+  box-shadow: 0px 5px 5px #999;
+  transform: translateY(5px);
+}

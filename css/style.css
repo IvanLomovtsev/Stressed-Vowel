@@ -61,7 +61,7 @@ h1 {
     padding-top: 23px;
 }
 .card {
-    width: 300px;
+    width: 650px;
     height: 120px;
     background-color: #FFFFFF;
     margin: auto;
@@ -72,4 +72,10 @@ h1 {
     border: none;
     border-radius: 20px;
     padding-top: 23px;
+}
+.control-buttons {
+    display: flex;
+    width: 700px;
+    margin:auto;
+    margin-top: 50px;
 }

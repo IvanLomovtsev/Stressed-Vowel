@@ -17,8 +17,30 @@ function getNewWord() {
         currentWord = data[num][(Object.keys(data[num])[numCurrentWord])];
         trueWord = data[num]['true'];
         const displayedWord = document.querySelector('.word');
-        console.log(currentWord);
-        displayedWord.textContent = currentWord;
+        const startWord = document.querySelector('.start-word');
+        const stressedVovel = document.querySelector('.stressed-vowel');
+        const endWord = document.querySelector('.end-word');
+        function searchStressedVovel(currentWord) {
+            let vowel = ["А", "У", "О","Ы", "Э", "Я", "Ю", "Ё", "И", "Е"];
+            let word;
+            vowel.forEach(letter =>{
+                if (currentWord.indexOf(letter) !== -1){
+                    if(currentWord.indexOf(letter)===0){
+                        word = currentWord.split(letter);
+                        startWord.textContent=''
+                        stressedVovel.textContent = letter;
+                        endWord.textContent = word[1];
+                    }
+                    else {
+                        word = currentWord.split(letter);
+                        startWord.textContent = word[0];
+                        stressedVovel.textContent = letter;
+                        endWord.textContent = word[1];
+                    }
+                }
+        })
+        }
+        searchStressedVovel(currentWord);
       });
     }
 getNewWord();

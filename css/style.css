@@ -4,78 +4,93 @@ body {
     font-family: 'Roboto', 'Helvetica Nue', sans-serif;
 }
 header {
-    width: 576px;
-    height: 130px;
+    width: 50%;
     margin: auto;
 }
 h1 {
     margin: auto;
     text-align: center;
-    font-size: 50px;
-    padding-top: 40px;
+    font-size: 3.2em;
+    padding-top: 5%;
 }
-.stressed-vowel {
+button {
+    cursor: pointer;
+}
+.stressed-vowel,.stressed-letter {
     color: #D62323;
 }
 .description {
     background: #FFFFFF;
-    width: 576px;
-    margin:16px auto 37px;
+    width: 50%;
+    margin: 2% auto 2%;
     padding: 0.1px;
     border-radius: 10px;
 }
-.text_description {
-    font-size: 34px;
+.text-description {
+    font-size: 2em;
     text-align: center; 
-    margin: 30px;
 }
 .btn {
-    width: 576px;
+    width: 40%;
     margin: auto;
     text-align: center;
 }
-.btn_begin {
+.btn-begin {
     margin:auto;
-    width: 300px;
-    height: 150px;
+    width: 20%;
+    padding: 2% 0%;
     border: none;
     border-radius: 10px;
-    font-size: 50px;
+    font-size: 3em;
     font-weight: bold;
     box-shadow: 0px 15px 15px #999;   
 }
-.btn_begin:active {
-  box-shadow: 0px 5px 5px #999;
-  transform: translateY(5px);
-}
-.scores {
-    width: 300px;
-    height: 120px;
-    background-color: #FCFF7C;
-    margin: auto;
-    text-align: center;
-    font-size: 75px;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    padding-top: 23px;
-}
-.card {
-    width: 650px;
-    height: 120px;
-    background-color: #FFFFFF;
-    margin: auto;
-    margin-top: 49px;
-    text-align: center;
-    font-size: 75px;
-    font-weight: bold;
-    border: none;
-    border-radius: 20px;
-    padding-top: 23px;
+.btn-begin:active {
+    box-shadow: 0px 5px 5px #999;
+    transform: translateY(5px);
 }
 .control-buttons {
     display: flex;
-    width: 700px;
-    margin:auto;
+    width: 50%;
+    margin: auto;
     margin-top: 50px;
+}
+.btn-game {
+    margin: auto;
+    width: 90%;
+    padding: 8% 0%;
+    border: none;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    box-shadow: 0px 15px 15px #999;
+}
+.btn-game:active {
+    box-shadow: 0px 5px 5px #999;
+    transform: translateY(5px);
+}
+.scores {
+    width: 10%;
+    padding: 1%;
+    margin-top: 2%;
+    background-color: #FCFF7C;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+}
+.card {
+    width: 40%;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 2%;
+    padding: 2%;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
 }

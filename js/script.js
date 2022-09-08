@@ -18,7 +18,7 @@ function getNewWord() {
         trueWord = data[num]['true'];
         const displayedWord = document.querySelector('.word');
         const startWord = document.querySelector('.start-word');
-        const stressedVovel = document.querySelector('.stressed-vowel');
+        const stressedVovel = document.querySelector('.stressed-letter');
         const endWord = document.querySelector('.end-word');
         function searchStressedVovel(currentWord) {
             let vowel = ["А", "У", "О","Ы", "Э", "Я", "Ю", "Ё", "И", "Е"];
@@ -34,8 +34,11 @@ function getNewWord() {
                     else {
                         word = currentWord.split(letter);
                         startWord.textContent = word[0];
+                        console.log(letter);
                         stressedVovel.textContent = letter;
+                        console.log(stressedVovel.innerHTML);
                         endWord.textContent = word[1];
+                        console.log(endWord.innerHTML);
                     }
                 }
         })

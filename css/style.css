@@ -14,7 +14,10 @@ h1 {
     font-size: 50px;
     padding-top: 40px;
 }
-.stressed-vowel {
+button {
+    cursor: pointer;
+}
+.stressed-vowel,.stressed-letter {
     color: #D62323;
 }
 .description {

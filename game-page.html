@@ -9,24 +9,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>уд<span class="stressed-vowel">А</span>рная гл<span class="stressed-vowel">А</span>сная</h1>
+    <header class="header">
+        <div class="containeer">
+            <h1 class="header__h1">уд<span class="stressed-vowel">А</span>рная гл<span class="stressed-vowel">А</span>сная</h1>
+        </div>  
     </header>
-    <main>
-        <div class="scores">
-            <span class="score"></span>
-        </div>
-        <div class="card">  
-            <span class='start-word'></span><span class="stressed-letter"></span><span class="end-word"></span>
-            <span class="word"></span>
-        </div>
-        <div class = control-buttons>
-            <form class="btn">
-                <button class="btn-game btn-true" type='button'>Верно</button>
-            </form>
-            <form class="btn">
-                <button class="btn-game btn-false" type='button'>Неверно</button>
-            </form>
+    <main class="main">
+        <div class="containeer">
+            <div class="main__scores">
+                <span class="main__scores-score"></span>
+            </div>
+            <div class="main__card">  
+                <span class='main__card-start-word'></span><span class="main__card-stressed-letter"></span><span class="main__card-end-word"></span>
+                <span class="main__card-word"></span>
+            </div>
+            <div class=main__control>
+                <form class="main__control-button">
+                    <button class="main__control-button-true" type='button'>Верно</button>
+                </form>
+                <form class="main__control-button">
+                    <button class="main__control-button-false" type='button'>Неверно</button>
+                </form>
+            </div>
         </div>
     </main>
     <script type="module" src="js/script.js"></script>

@@ -34,88 +34,56 @@ body {
     font-weight: bold;
     box-shadow: 0px 2vw 2vw #999;
 }
-
-
-
-
-button {
-    cursor: pointer;
-}
-.stressed-vowel,.stressed-letter {
-    color: #D62323;
-}
-.description {
-    background: #FFFFFF;
-    width: 50%;
-    margin: 2% auto 2%;
-    padding: 0.1px;
-    border-radius: 10px;
-}
-.text-description {
-    font-size: 2em;
-    text-align: center; 
-}
-.btn {
-    width: 40%;
-    margin: auto;
-    text-align: center;
-}
-.btn-begin {
-    margin:auto;
-    width: 20%;
-    padding: 2% 0%;
-    border: none;
-    border-radius: 10px;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0px 15px 15px #999;   
-}
-.btn-begin:active {
+.main__page-button:active {
     box-shadow: 0px 5px 5px #999;
     transform: translateY(5px);
 }
-.control-buttons {
-    display: flex;
-    width: 50%;
+.main__scores {
     margin: auto;
-    margin-top: 50px;
-}
-.btn-game {
-    margin: auto;
-    width: 90%;
-    padding: 8% 0%;
-    border: none;
-    border-radius: 10px;
-    font-size: 3em;
-    font-weight: bold;
-    box-shadow: 0px 15px 15px #999;
-}
-.btn-game:active {
-    box-shadow: 0px 5px 5px #999;
-    transform: translateY(5px);
-}
-.scores {
-    width: 10%;
-    padding: 1%;
-    margin-top: 2%;
+    margin-top: 3vw;
+    width: 10vw;
+    height: 5vw;
     background-color: #FCFF7C;
-    margin: auto;
-    margin-top: 2%;
     text-align: center;
-    font-size: 3em;
+    font-size: 3vw;
     font-weight: bold;
     border: none;
     border-radius: 20px;
 }
-.card {
-    width: 40%;
+
+.main__card {
+    width: 25vw;
+    height: 10vw;
     background-color: #FFFFFF;
     margin: auto;
-    margin-top: 2%;
-    padding: 2%;
+    margin-top: 5%;
     text-align: center;
     font-size: 5em;
     font-weight: bold;
     border: none;
     border-radius: 20px;
 }
+
+.stressed-vowel,.stressed-letter {
+    color: #D62323;
+}
+.main__control {
+    width: 70%;
+    margin: auto;
+    margin-top: 8%;
+    display: flex;
+    justify-content: space-between;
+}
+.main__control-button-true, .main__control-button-false {
+    margin: auto;
+    display: block;
+    width: 20vw;
+    height: 7vw;
+    font-size: 3.5vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 1vw;
+    font-weight: bold;
+    box-shadow: 0px 2vw 2vw #999;
+}
+

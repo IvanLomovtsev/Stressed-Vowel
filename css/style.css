@@ -1,18 +1,43 @@
 body {
-    margin:auto;
     background: #FCCDA3;
     font-family: 'Roboto', 'Helvetica Nue', sans-serif;
 }
-header {
-    width: 50%;
-    margin: auto;
+.containeer {
+     width: 60%;
+     margin: auto;
 }
-h1 {
+.header__h1 {
     margin: auto;
     text-align: center;
-    font-size: 3.2em;
-    padding-top: 5%;
+    font-size: 4vw;
+    padding-top: 1vw;
 }
+.main__page {
+    margin: auto;
+}
+.description__text {
+    text-align: center;
+    font-size: 3vw;
+}
+.main__page-button {
+    margin: auto;
+}
+.main__page-button-begin {
+    margin: auto;
+    display: block;
+    width: 20vw;
+    height: 7vw;
+    font-size: 4vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 1vw;
+    font-weight: bold;
+    box-shadow: 0px 2vw 2vw #999;
+}
+
+
+
+
 button {
     cursor: pointer;
 }

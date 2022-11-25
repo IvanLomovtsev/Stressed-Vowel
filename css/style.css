@@ -1,0 +1,121 @@
+body {
+    background: #FCCDA3;
+    font-family: 'Roboto', 'Helvetica Nue', sans-serif;
+}
+.containeer {
+     width: 60%;
+     margin: auto;
+}
+.header__h1 {
+    margin: auto;
+    text-align: center;
+    font-size: 4vw;
+    padding-top: 1vw;
+}
+.main__page {
+    margin: auto;
+}
+.description__text {
+    text-align: center;
+    font-size: 3vw;
+}
+.main__page-button {
+    margin: auto;
+}
+.main__page-button-begin {
+    margin: auto;
+    display: block;
+    width: 20vw;
+    height: 7vw;
+    font-size: 4vw;
+    cursor: pointer;
+    border: none;
+    border-radius: 1vw;
+    font-weight: bold;
+    box-shadow: 0px 2vw 2vw #999;
+}
+
+
+
+
+button {
+    cursor: pointer;
+}
+.stressed-vowel,.stressed-letter {
+    color: #D62323;
+}
+.description {
+    background: #FFFFFF;
+    width: 50%;
+    margin: 2% auto 2%;
+    padding: 0.1px;
+    border-radius: 10px;
+}
+.text-description {
+    font-size: 2em;
+    text-align: center; 
+}
+.btn {
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+.btn-begin {
+    margin:auto;
+    width: 20%;
+    padding: 2% 0%;
+    border: none;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    box-shadow: 0px 15px 15px #999;   
+}
+.btn-begin:active {
+    box-shadow: 0px 5px 5px #999;
+    transform: translateY(5px);
+}
+.control-buttons {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    margin-top: 50px;
+}
+.btn-game {
+    margin: auto;
+    width: 90%;
+    padding: 8% 0%;
+    border: none;
+    border-radius: 10px;
+    font-size: 3em;
+    font-weight: bold;
+    box-shadow: 0px 15px 15px #999;
+}
+.btn-game:active {
+    box-shadow: 0px 5px 5px #999;
+    transform: translateY(5px);
+}
+.scores {
+    width: 10%;
+    padding: 1%;
+    margin-top: 2%;
+    background-color: #FCFF7C;
+    margin: auto;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+}
+.card {
+    width: 40%;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-top: 2%;
+    padding: 2%;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+}

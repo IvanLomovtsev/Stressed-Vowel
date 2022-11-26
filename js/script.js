@@ -1,6 +1,6 @@
-const btnTrue = document.querySelector('.btn-true');
-const btnFalse = document.querySelector('.btn-false');
-const scoringField = document.querySelector('.score');
+const btnTrue = document.querySelector('.main__control-button-true');
+const btnFalse = document.querySelector('.main__control-button-false');
+const scoringField = document.querySelector('.main__scores-score');
 
 let currentWord = '';
 let trueWord = '';
@@ -16,10 +16,10 @@ function getNewWord() {
         const numCurrentWord = getRandomIntInclusive(0, Object.keys(data[num]).length-1);
         currentWord = data[num][(Object.keys(data[num])[numCurrentWord])];
         trueWord = data[num]['true'];
-        const displayedWord = document.querySelector('.word');
-        const startWord = document.querySelector('.start-word');
-        const stressedVovel = document.querySelector('.stressed-letter');
-        const endWord = document.querySelector('.end-word');
+
+        const startWord = document.querySelector('.main__card-start-word');
+        const stressedVovel = document.querySelector('.main__card-stressed-letter');
+        const endWord = document.querySelector('.main__card-end-word');
         function searchStressedVovel(currentWord) {
             let vowel = ["А", "У", "О","Ы", "Э", "Я", "Ю", "Ё", "И", "Е"];
             let word;

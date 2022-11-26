@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', 'Helvetica Nue', sans-serif;
 }
 .containeer {
-     width: 60%;
+     width: 60vw;
      margin: auto;
 }
 .header__h1 {
@@ -44,33 +44,36 @@ body {
     width: 10vw;
     height: 5vw;
     background-color: #FCFF7C;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 3vw;
     font-weight: bold;
     border: none;
-    border-radius: 20px;
+    border-radius: 1vw;
 }
-
 .main__card {
     width: 25vw;
     height: 10vw;
     background-color: #FFFFFF;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 3vw;
     text-align: center;
-    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4vw;
     font-weight: bold;
     border: none;
-    border-radius: 20px;
+    border-radius: 1vw;
 }
-
-.stressed-vowel,.stressed-letter {
+.stressed-vowel,.main__card-stressed-letter {
     color: #D62323;
 }
 .main__control {
-    width: 70%;
+    width: 45vw;
     margin: auto;
-    margin-top: 8%;
+    margin-top: 5vw;
     display: flex;
     justify-content: space-between;
 }
@@ -86,4 +89,3 @@ body {
     font-weight: bold;
     box-shadow: 0px 2vw 2vw #999;
 }
-

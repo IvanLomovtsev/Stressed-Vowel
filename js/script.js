@@ -12,7 +12,7 @@ let score = 0;
 scoringField.textContent = score;
 
 function getNewWord() {
-    const words = 'js/data2.json';
+    const words = 'js/data.json';
     fetch(words)
       .then(res => res.json())
       .then(data => { 

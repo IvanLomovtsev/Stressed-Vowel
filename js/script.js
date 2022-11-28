@@ -4,12 +4,20 @@ const scoringField = document.querySelector('.main__scores-score');
 const startWord = document.querySelector('.main__card-start-word');
 const stressedLetter = document.querySelector('.main__card-stressed-letter');
 const endWord = document.querySelector('.main__card-end-word');
+const lossHealh = document.querySelector('.main__health-loss');
 
 let currentWord = '';
 let testCurentWord = '';
 let trueWord = '';
 let score = 0;
+let health = 0;
 scoringField.textContent = score;
+lossHealh.style.width = "0%";
+setInterval(()=>{
+    health+=1;
+    console.log(health);
+    lossHealh.style.width = health + '%'; 
+},200);
 
 function getNewWord() {
     const words = 'js/data.json';
@@ -44,9 +52,10 @@ function getRandomIntInclusive(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-buttonTrue.addEventListener("click", compareWord => {
+buttonTrue.addEventListener("click", () => {
     if (currentWord == testCurentWord){
         score+=100;
+        health-=10;
         scoringField.textContent = score;
         getNewWord();
     }
@@ -59,6 +68,7 @@ buttonTrue.addEventListener("click", compareWord => {
 buttonFalse.addEventListener("click", () => {
     if (currentWord !== testCurentWord){
         score+=100;
+        health-=10;
         scoringField.textContent = score;
         getNewWord();
     }

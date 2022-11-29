@@ -17,7 +17,7 @@ setInterval(()=>{
     health+=1;
     console.log(health);
     lossHealh.style.width = health + '%'; 
-},200);
+},100);
 
 function getNewWord() {
     const words = 'js/data.json';
@@ -56,11 +56,18 @@ buttonTrue.addEventListener("click", () => {
     if (currentWord == testCurentWord){
         score+=100;
         health-=10;
+        if (health<=0){
+            health = 0;
+        }
         scoringField.textContent = score;
         getNewWord();
     }
     else {
         score-=100;
+        if (score<=0){
+            score = 0;
+        }
+        health+=10;
         scoringField.textContent = score;
         getNewWord();
     }
@@ -69,11 +76,18 @@ buttonFalse.addEventListener("click", () => {
     if (currentWord !== testCurentWord){
         score+=100;
         health-=10;
+        if (health<=0){
+            health = 0;
+        }
         scoringField.textContent = score;
         getNewWord();
     }
     else {
         score-=100;
+        if (score<=0){
+            score = 0;
+        }
+        health+=10;
         scoringField.textContent = score;
         getNewWord();
     }

@@ -5,6 +5,10 @@ const startWord = document.querySelector('.main__card-start-word');
 const stressedLetter = document.querySelector('.main__card-stressed-letter');
 const endWord = document.querySelector('.main__card-end-word');
 const lossHealh = document.querySelector('.main__health-loss');
+const losePopupBackground = document.querySelector('.popup');
+const losePopup = document.querySelector('.popup__elements');
+const finalScores = document.querySelector('.popup__elements-message-scores');
+
 
 let currentWord = '';
 let testCurentWord = '';
@@ -13,10 +17,17 @@ let score = 0;
 let health = 0;
 scoringField.textContent = score;
 lossHealh.style.width = "0%";
-setInterval(()=>{
+let updateHealth = setInterval(()=>{
     health+=1;
     console.log(health);
-    lossHealh.style.width = health + '%'; 
+    lossHealh.style.width = health + '%';
+    if (health === 100){
+        clearInterval(updateHealth);
+        finalScores.textContent = score;
+        losePopup.style.top = "0"
+        losePopupBackground.style.top = "0";
+        losePopup.style.top = "25vw";
+    }
 },100);
 
 function getNewWord() {

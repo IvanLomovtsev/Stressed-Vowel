@@ -1,6 +1,6 @@
 body {
-    background: #FCCDA3;
-    font-family: 'Roboto', 'Helvetica Nue', sans-serif;
+    background: #ffffff;
+    font-family: 'Montserrat', sans-serif;
 }
 .containeer {
      width: 60vw;
@@ -10,30 +10,35 @@ body {
     margin: auto;
     text-align: center;
     font-size: 4vw;
+    font-weight: bold;
     padding-top: 1vw;
 }
 .main__page {
     margin: auto;
 }
 .description__text {
+    margin: auto;
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    font-weight: 300;
 }
 .main__page-form-begin {
     margin: auto;
 }
 .main__page-button-begin, .main__page-button-stats, .main__page-button-setting {
+    font-family: 'Montserrat', sans-serif;
     margin: auto;
     margin-top: 3vw;
     display: block;
-    width: 25vw;
-    height: 6vw;
-    font-size: 3vw;
+    width: 35vw;
+    height: 7vw;
+    font-size: 3.8vw;
     cursor: pointer;
     border: none;
     border-radius: 1vw;
-    font-weight: bold;
-    box-shadow: 0px 2vw 2vw #999;
+    font-weight: 700;
+    background: #dfe8ff;
+    /*box-shadow: 0px 2vw 2vw #999;*/
 }
 .main__page-button-begin:active, .main__page-button-stats:active, .main__page-button-setting:active {
     box-shadow: 0px 5px 5px #999;
@@ -94,7 +99,7 @@ body {
     border-radius: 1vw;
 }
 .stressed-vowel,.main__card-stressed-letter {
-    color: #D62323;
+    color: #ff130a;
 }
 .main__control {
     width: 45vw;

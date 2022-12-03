@@ -28,7 +28,7 @@ let updateHealth = setInterval(()=>{
         losePopupBackground.style.top = "0";
         losePopup.style.top = "25vw";
     }
-},100);
+},300);
 
 function getNewWord() {
     const words = 'js/data.json';

@@ -19,7 +19,6 @@ scoringField.textContent = score;
 lossHealh.style.width = "0%";
 let updateHealth = setInterval(()=>{
     health+=1;
-    console.log(health);
     lossHealh.style.width = health + '%';
     if (health === 100){
         clearInterval(updateHealth);
@@ -35,22 +34,40 @@ function getNewWord() {
     fetch(words)
       .then(res => res.json())
       .then(data => { 
+        let numTestStressedVowel;
         const num = getRandomIntInclusive(0, data.length-1);
         currentWord = data[num]["true"];
-        let lowCurrentWord = currentWord.toLowerCase();
-        let lowVowel = ["а", "у", "о", "ы", "э", "я", "ю", "ё", "и", "е"];
-        let arrayVowels = [];
-        lowCurrentWord = lowCurrentWord.split('');
-        lowVowel.forEach (letter =>{
-            for (let i=0; i<lowCurrentWord.length; i++) {
-                if (letter==lowCurrentWord[i]){
-                    arrayVowels.push(i);
+        const choice = getRandomIntInclusive(0, 1);
+        console.log(currentWord);
+        console.log(choice);
+        if (choice === 0){
+            testCurentWord = currentWord;
+            let upVowel = ["А", "У", "О", "Ы", "Э", "Я", "Ю", "Ё", "И", "Е"];
+            upVowel.forEach (letter =>{
+                let searchVowel = testCurentWord.indexOf(letter);
+                if (searchVowel !== (-1)){
+                    numTestStressedVowel = searchVowel;
                 }
-            }
-        })
-        let numTestStressedVowel = arrayVowels[getRandomIntInclusive(0, arrayVowels.length-1)];
-        lowCurrentWord[numTestStressedVowel] = lowCurrentWord[numTestStressedVowel].toUpperCase();
-        testCurentWord = lowCurrentWord.join('')
+            })
+        }
+        else {
+            let lowCurrentWord = currentWord.toLowerCase();
+            let lowVowel = ["а", "у", "о", "ы", "э", "я", "ю", "ё", "и", "е"];
+            let arrayVowels = [];
+            lowCurrentWord = lowCurrentWord.split('');
+            lowVowel.forEach (letter =>{
+                for (let i=0; i<lowCurrentWord.length; i++) {
+                    if (letter==lowCurrentWord[i]){
+                        arrayVowels.push(i);
+                    }
+                }
+            })
+            
+            numTestStressedVowel = arrayVowels[getRandomIntInclusive(0, arrayVowels.length-1)];
+            lowCurrentWord[numTestStressedVowel] = lowCurrentWord[numTestStressedVowel].toUpperCase();
+            testCurentWord = lowCurrentWord.join('')   
+        }
+        console.log(numTestStressedVowel);
         startWord.textContent = testCurentWord.slice(0,numTestStressedVowel);
         stressedLetter.textContent = testCurentWord[numTestStressedVowel];
         endWord.textContent = testCurentWord.slice(numTestStressedVowel+1);

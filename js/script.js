@@ -5,6 +5,10 @@ const startWord = document.querySelector('.main__card-start-word');
 const stressedLetter = document.querySelector('.main__card-stressed-letter');
 const endWord = document.querySelector('.main__card-end-word');
 const lossHealh = document.querySelector('.main__health-loss');
+const losePopupBackground = document.querySelector('.popup');
+const losePopup = document.querySelector('.popup__elements');
+const finalScores = document.querySelector('.popup__elements-message-scores');
+
 
 let currentWord = '';
 let testCurentWord = '';
@@ -13,33 +17,57 @@ let score = 0;
 let health = 0;
 scoringField.textContent = score;
 lossHealh.style.width = "0%";
-setInterval(()=>{
+let updateHealth = setInterval(()=>{
     health+=1;
-    console.log(health);
-    lossHealh.style.width = health + '%'; 
-},100);
+    lossHealh.style.width = health + '%';
+    if (health === 100){
+        clearInterval(updateHealth);
+        finalScores.textContent = score;
+        losePopup.style.top = "0"
+        losePopupBackground.style.top = "0";
+        losePopup.style.top = "25vw";
+    }
+},300);
 
 function getNewWord() {
     const words = 'js/data.json';
     fetch(words)
       .then(res => res.json())
       .then(data => { 
+        let numTestStressedVowel;
         const num = getRandomIntInclusive(0, data.length-1);
         currentWord = data[num]["true"];
-        let lowCurrentWord = currentWord.toLowerCase();
-        let lowVowel = ["а", "у", "о", "ы", "э", "я", "ю", "ё", "и", "е"];
-        let arrayVowels = [];
-        lowCurrentWord = lowCurrentWord.split('');
-        lowVowel.forEach (letter =>{
-            for (let i=0; i<lowCurrentWord.length; i++) {
-                if (letter==lowCurrentWord[i]){
-                    arrayVowels.push(i);
+        const choice = getRandomIntInclusive(0, 1);
+        console.log(currentWord);
+        console.log(choice);
+        if (choice === 0){
+            testCurentWord = currentWord;
+            let upVowel = ["А", "У", "О", "Ы", "Э", "Я", "Ю", "Ё", "И", "Е"];
+            upVowel.forEach (letter =>{
+                let searchVowel = testCurentWord.indexOf(letter);
+                if (searchVowel !== (-1)){
+                    numTestStressedVowel = searchVowel;
                 }
-            }
-        })
-        let numTestStressedVowel = arrayVowels[getRandomIntInclusive(0, arrayVowels.length-1)];
-        lowCurrentWord[numTestStressedVowel] = lowCurrentWord[numTestStressedVowel].toUpperCase();
-        testCurentWord = lowCurrentWord.join('')
+            })
+        }
+        else {
+            let lowCurrentWord = currentWord.toLowerCase();
+            let lowVowel = ["а", "у", "о", "ы", "э", "я", "ю", "ё", "и", "е"];
+            let arrayVowels = [];
+            lowCurrentWord = lowCurrentWord.split('');
+            lowVowel.forEach (letter =>{
+                for (let i=0; i<lowCurrentWord.length; i++) {
+                    if (letter==lowCurrentWord[i]){
+                        arrayVowels.push(i);
+                    }
+                }
+            })
+            
+            numTestStressedVowel = arrayVowels[getRandomIntInclusive(0, arrayVowels.length-1)];
+            lowCurrentWord[numTestStressedVowel] = lowCurrentWord[numTestStressedVowel].toUpperCase();
+            testCurentWord = lowCurrentWord.join('')   
+        }
+        console.log(numTestStressedVowel);
         startWord.textContent = testCurentWord.slice(0,numTestStressedVowel);
         stressedLetter.textContent = testCurentWord[numTestStressedVowel];
         endWord.textContent = testCurentWord.slice(numTestStressedVowel+1);

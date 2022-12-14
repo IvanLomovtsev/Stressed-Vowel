@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>удАрная глАсная</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -15,17 +15,18 @@
         </div>  
     </header>
     <div class="popup">
-        <div class="popup__message">
-            <h2 class="popup__message-h2">игр<span class="stressed-vowel">А</span> ок<span class="stressed-vowel">О</span>нчена</h2>
-            <p class="popup__message-p">ты набрал <span class="popup__message-score"></span> очков</p>
+        <div class="popup__elements">
+            <div class="popup__elements-message">
+                <h2 class="popup__elements-message-h2">игр<span class="stressed-vowel">А</span> ок<span class="stressed-vowel">О</span>нчена</h2>
+                <p class="popup__elements-message-p">ты набрал <span class="popup__elements-message-scores"></span> очков</p>
+            </div>
+            <form id="popup__elements-form-start-again" action="game-page.html">
+                <button class="popup__elements-form-start-again-button">нач<span class="stressed-vowel">А</span>ть з<span class="stressed-vowel">А</span>ново</button>
+            </form>
+            <form id="popup__elements-form-menu" action="index.html">
+                <button class="popup__elements-form-menu-button">мен<span class="stressed-vowel">Ю</span></button>
+            </form>
         </div>
-        <form id="popup__form-start-again" action="game-page.html">
-            <button class="popup__button-start-again">нач<span class="stressed-vowel">А</span>ть з<span class="stressed-vowel">А</span>ново</button>
-        </form>
-        <form id="popup__form-menu" action="index.html">
-            <button class="popup__button-menu">мен<span class="stressed-vowel">Ю</span></button>
-        </form>
-
     </div>
     <main class="main">
         <div class="containeer">
@@ -44,10 +45,10 @@
             </div>
             <div class=main__control>
                 <form class="main__control-button">
-                    <button class="main__control-button-true" type='button'>Верно</button>
+                    <button class="main__control-button-true" type='button'>в<span class="stressed-vowel">Е</span>рно</button>
                 </form>
                 <form class="main__control-button">
-                    <button class="main__control-button-false" type='button'>Неверно</button>
+                    <button class="main__control-button-false" type='button'>нев<span class="stressed-vowel">Е</span>рно</button>
                 </form>
             </div>
         </div>
